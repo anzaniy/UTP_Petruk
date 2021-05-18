@@ -13,8 +13,10 @@ int main(){
 	char Buku3[] = "Mantappu Jiwa";
 	char Buku4[] = "Komet Minor";
 	char Buku5[] = "Dear Tomorrow";
-	int kode, jumlah, stok, belanja, pilih;
+	int kode, jumlah, stok, belanja, pilih, x;
 	double harga;
+	
+	do{
 	
 	cout << "1. Cari Buku " << endl;
 	cout << "2. Beli Buku "<< endl;
@@ -151,6 +153,17 @@ int main(){
 			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);
 		}
 	}
-	return 0;
+	
 }
+	cout << "\nTerima kasih sudah menjalankan program kami apakah anda masih ingin melanjutkan ?\n";
+			cout << "1. Kembali mencari buku\n";
+			cout << "2. Selesai\n";
+			cout << "Pilihan Kamu : ";
+			cin >> x;
+			
+			
+			
+		}while(x < 2);
+		
+		return 0;		
 }
