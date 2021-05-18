@@ -2,4 +2,155 @@
 #include<string>
 using namespace std;
 
+int total (int harga, int jumlah){
+	return harga*jumlah;
+}
+
 int main(){
+	menu:
+	char Buku1[] = "Sebuah Seni Untuk Bersikap Bodo Amat";
+	char Buku2[] = "#88 Love Life";
+	char Buku3[] = "Mantappu Jiwa";
+	char Buku4[] = "Komet Minor";
+	char Buku5[] = "Dear Tomorrow";
+	int kode, jumlah, stok, belanja, pilih;
+	double harga;
+	
+	cout << "1. Cari Buku " << endl;
+	cout << "2. Beli Buku "<< endl;
+	cout << "Masukkan pilihan Anda: ";
+	cin >> pilih;
+	system ("cls");
+	
+	if (pilih == 1){
+		cout << "Masukkan kode buku (1-5): ";
+		cin >> kode;
+	switch(kode){
+		case(1):
+		{
+			harga = 60000;
+			stok = 10;
+			cout << "Judul Buku: " << Buku1 << endl;
+			cout << "Harga: Rp" << harga << endl;
+			if(stok>0){
+				cout << "Jumlah stok: " << stok << endl;
+			}else{
+				cout << "Stok Habis" << endl;
+			}
+			break;		
+		}
+		case(2):
+		{
+			harga = 90000;
+			stok = 20;
+			cout << "Judul Buku: " << Buku2 << endl;
+			cout << "Harga: Rp" << harga << endl;
+			if(stok>0){
+				cout << "Jumlah stok: " << stok << endl;
+			}else{
+				cout << "Stok Habis" << endl;
+			}
+			break;
+		}
+		case(3):
+		{
+			harga = 80000;
+			stok = 0;
+			cout << "Judul Buku: " << Buku3 << endl;
+			cout << "Harga: Rp" << harga << endl;
+			if(stok>0){
+				cout << "Jumlah stok: " << stok << endl;
+			}else{
+				cout << "Stok Habis" << endl;
+			}
+			break;
+		}
+		case(4):
+		{
+			harga = 100000;
+			stok = 13;
+			cout << "Judul Buku: " << Buku4 << endl;
+			cout << "Harga: Rp" << harga << endl;
+			if(stok>0){
+				cout << "Jumlah stok: " << stok << endl;
+			}else{
+				cout << "Stok Habis" << endl;
+			}
+			break;
+		}
+		case(5):
+		{
+			harga = 11000;
+			stok=30;
+			cout << "Judul Buku: " << Buku5 << endl;
+			cout << "Harga: Rp" << harga << endl;
+			if(stok>0){
+				cout << "Jumlah stok: " << stok << endl;
+			}else{
+				cout << "Stok Habis" << endl;
+			}
+			break;
+		}				
+	}
+	}
+	else if(pilih==2){
+		
+		int (*funcptr)(int, int);
+		funcptr = total;
+		
+		cout << "Masukkan kode buku (1-5): ";
+		cin >> kode;
+	switch(kode){
+		case (1):
+		{
+			cout << "Judul Buku: " << Buku1 << endl;
+			harga = 60000;
+			cout << "Harga: Rp" << harga << endl;
+			cout << "Jumlah : ";
+			cin >> jumlah;
+			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);
+			break;
+		}
+		case (2):
+		{
+			cout << "Judul Buku: " << Buku2 << endl;
+			harga = 90000;
+			cout << "Harga: Rp" << harga << endl;
+			cout << "Jumlah : ";
+			cin >> jumlah;
+			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);
+			break;
+		}
+		case(3):
+		{
+			cout << "Judul Buku: " << Buku3 << endl;
+			harga = 80000;
+			cout << "Harga: Rp" << harga << endl;
+			cout << "Jumlah : ";
+			cin >> jumlah;
+			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);	
+			break;	
+		}
+		case(4):
+		{
+			cout << "Judul Buku: " << Buku4 << endl;
+			harga = 100000;
+			cout << "Harga: Rp" << harga << endl;
+			cout << "Jumlah : ";
+			cin >> jumlah;
+			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);
+			break;
+		}
+		case(5):
+		{
+			cout << "Judul Buku: " << Buku5 << endl;
+			harga = 110000;
+			cout << "Harga: Rp" << harga << endl;
+			cout << "Jumlah : ";
+			cin >> jumlah;
+			cout << "Total Pembayaran: Rp"<< total(jumlah, harga);
+		}
+	}
+	return 0;
+}
+}
